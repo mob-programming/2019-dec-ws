@@ -3,15 +3,13 @@ from unittest import TestCase
 from day01.puzzle import Puzzle
 
 
-
-
 class TestPuzzle(TestCase):
 
     def test_calculate_fuel_requirement_for_module(self):
-        puzzle = Puzzle()
-        mass = 12
-        fuel = 2
-        self.assertEqual(fuel, puzzle.calculate_fuel(mass))
+        self.assertEqual(2, Puzzle.calculate_fuel(12))
+        self.assertEqual(2, Puzzle.calculate_fuel(14))
+        self.assertEqual(654, Puzzle.calculate_fuel(1969))
+        self.assertEqual(33583, Puzzle.calculate_fuel(100756))
 
 
 # For a mass of 12, divide by 3 and round down to get 4, then subtract 2 to get 2.
