@@ -15,6 +15,9 @@ class TestPuzzle(TestCase):
         self.assertEqual(34241, Puzzle.calculate_total_fuel([12, 14, 1969, 100756]))
         self.assertEqual(414, Puzzle.calculate_total_fuel([12, 1244]))
 
+    def test_read_file(self):
+        print(Puzzle.read_file())
+
 # For a mass of 12, divide by 3 and round down to get 4, then subtract 2 to get 2.
 # For a mass of 14, dividing by 3 and rounding down still yields 4, so the fuel required is also 2.
 # For a mass of 1969, the fuel required is 654.
